@@ -1,0 +1,11 @@
+name= raw_input("Enter file name:")
+fl= open(name, 'r+').read()
+lw= fl.lower()
+ws= lw.replace(' ','')
+sm= ws.translate(None, ",-!.;?:")
+occ= {}
+alpha= list ('abcdefghijklmnopqrstuvwxyz')
+for x in alpha:
+    occ[x]= sm.count(x)
+for x in occ:
+    print x, occ[x]
